@@ -1,1 +1,507 @@
+/* General Body & Container */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.7;
+}
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1.5em 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+header h1 a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+    color: #3498db;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3498db;
+}
+
+/* Hamburger menu (hidden by default on desktop) */
+.hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../images/hero-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-bottom: 30px; /* Space for adsterra spot below it */
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Main Content Layout (for index.html and article pages) */
+main {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+/* Articles Grid (Homepage) */
+.articles-grid {
+    flex: 3; /* Mengambil 3 bagian lebar */
+}
+
+.articles-grid h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.article-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 20px;
+    flex-grow: 1; /* Agar konten mengisi sisa ruang */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-content h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-content h3 a:hover {
+    color: #3498db;
+}
+
+.card-content .meta {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: #555;
+    flex-grow: 1;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #2980b9;
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 1; /* Mengambil 1 bagian lebar */
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.sidebar h3 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Article Page Specific Styles */
+.article-page article {
+    flex: 3;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+.article-page article h2 {
+    font-size: 2.8em;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.article-page article .meta {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+.article-page article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.article-page article p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.article-page article h3 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+}
+
+footer .footer-links a {
+    color: #3498db;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-links a:hover {
+    color: #fff;
+}
+
+/* Adsterra Spot Styling (Placeholder) */
+.adsterra-spot {
+    background-color: #ecf0f1;
+    border: 1px dashed #bdc3c7;
+    min-height: 120px; /* Minimal tinggi agar terlihat */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 0.9em;
+    margin: 20px 0; /* Memberi jarak */
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden; /* Penting agar iklan tidak keluar dari wadahnya */
+}
+
+/* Specific ad spot adjustments */
+.hero .adsterra-spot {
+    width: 100%;
+    max-width: 728px; /* Contoh max width untuk banner */
+    height: 90px;
+    margin-top: 20px;
+    background-color: #dae2e7;
+}
+
+.middle-banner, .bottom-banner {
+    min-height: 90px; /* Bisa 90px atau 250px tergantung unit */
+    width: 100%;
+    max-width: 728px; /* Untuk banner 728x90 */
+    margin: 30px auto; /* Pusatkan */
+}
+
+.sidebar-ad-top, .sidebar-ad-bottom, .sidebar-ad-article {
+    min-height: 250px; /* Bisa 250 atau 600px tergantung unit */
+    width: 100%;
+    max-width: 300px;
+}
+
+.article-top-ad, .article-middle-ad, .article-bottom-ad {
+    min-height: 250px;
+    width: 100%;
+    max-width: 300px;
+    margin: 25px auto;
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    main {
+        flex-direction: column; /* Stacking layout on smaller screens */
+    }
+
+    .articles-grid {
+        flex: auto;
+    }
+
+    .sidebar {
+        flex: auto;
+        order: -1; /* Pindahkan sidebar ke atas di mobile untuk beberapa desain */
+        margin-bottom: 30px;
+    }
+
+    .hero h2 {
+        font-size: 2.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    header .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header h1 {
+        flex-basis: 100%; /* Ambil lebar penuh */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 0px; /* Adjust margin */
+        text-align: center;
+        position: relative; /* For hamburger positioning */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hidden by default for JS toggle */
+        width: 100%;
+        background-color: #34495e; /* Background for dropdown menu */
+        padding: 10px 0;
+        position: absolute;
+        top: 100%; /* Position below nav */
+        left: 0;
+        z-index: 1000; /* Ensure it's above other content */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    nav ul.active { /* Class added by JS */
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hamburger-menu {
+        display: flex; /* Show hamburger */
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .hero {
+        padding: 60px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2.2em;
+    }
+
+    .hero p {
+        font-size: 1.1em;
+    }
+
+    .articles-grid h2, .sidebar h3, .article-page article h2 {
+        font-size: 2em;
+    }
+
+    .article-list {
+        grid-template-columns: 1fr; /* Satu kolom di HP */
+    }
+
+    .blog-card img {
+        height: 180px;
+    }
+
+    .sidebar-ad-top, .sidebar-ad-bottom, .sidebar-ad-article {
+        max-width: 100%; /* Full width in mobile for sidebar ads */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .adsterra-spot.top-banner, .middle-banner, .bottom-banner {
+        height: 60px; /* Untuk mobile banner 320x50 atau sejenisnya */
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .article-top-ad, .article-middle-ad, .article-bottom-ad {
+        max-width: 100%;
+    }
+}
